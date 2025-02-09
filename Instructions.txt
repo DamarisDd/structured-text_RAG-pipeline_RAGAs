@@ -1,0 +1,69 @@
+			-- PREREQUISITES FOR EVALUATING RAG APPLICATIONS WITH RAGAS --
+
+
+Windows & device specifications requirements:
+- Windows 11, version: 24H2
+- System type: 64-bit operating system, x64-based processor
+
+
+1. Download Python 3.12.1 (Windows installer (64-bit) file) from:
+https://www.python.org/downloads/release/python-3121/
+
+2. Install Python 3.12.1 by running python-3.12.1-amd64.exe
+
+3. Create a directory for your python project in your preferred location
+
+4. Open Windows PowerShell and navigate to the previously created directory (root directory) of your current python project:
+cd "<complete-path-to-your-file>"
+   {Or 4.1. Launch Visual Studio Code
+       4.2. Add the directory to your workspace in Visual Studio Code:
+	Visual Studio Code - File - Add Folder to Workspace
+       4.3. Open an integrated PowerShell terminal: 
+	Visual Studio Code - View - Terminal
+       4.4. In the terminal, ensure the shell is set to PowerShell. If not, click the dropdown in the terminal area and select "PowerShell".
+       4.5. Make sure the root directory corresponds to the directory/folder of your project. Navigate to it using 'cd "<complete-path-to-your-file>"'
+   }
+
+5. Create the virtual environment of the project:
+virtualenv venv
+   {Sidenote: if you do not have a Virtual Python Environment builder, run: pip install virtualenv}
+
+6. Activate the virtual environment:
+.venv\Scripts\Activate
+
+7. Install all the dependencies by using the requirements.txt file. The dependencies will be automatically installed into your virtualenv:
+pip install -r requirements.txt
+   {Sidenote: You can also install the required Python packages manually:
+	pip install virtualenv
+	pip install python3.12-dev 
+	pip install python-dotenv requests weaviate weaviate-client datasets wheel setuptools
+	pip install langchain langchain-openai langchain-weaviate openai tiktoken
+	pip install -U langchain-community
+    }
+
+8. Define OpenAI key in a file named ".env", in the root directory of your project:
+OPENAI_API_KEY="<YOUR_OPENAI_API_KEY>"
+
+9. Download Docker Desktop (Docker Desktop for Windows - x86_64) from:
+https://docs.docker.com/desktop/setup/install/windows-install/
+
+10. Install Docker Desktop by running Docker Desktop Installer.exe
+
+11. Open Docker Desktop
+
+12. Verify if Docker is running by typing the following command in the terminal:
+docker --version
+
+If Docker is running correctly, this command will return the version of Docker installed (e.g., Docker version 25.0.2, build 29cf629).
+
+13. Start a Weaviate instance using Docker by running the following command into the terminal:
+docker run -d --name weaviate `
+  -p 8080:8080 `
+  -p 50051:50051 `
+  semitechnologies/weaviate:latest
+
+14. Verify that the Weaviate container is running:
+docker ps
+
+The output should list a container with the name weaviate (e.g., semitechnologies/weaviate:latest).
+

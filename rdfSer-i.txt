@@ -1,0 +1,42 @@
+
+<http://www.omilab.org#Message_Flow_BPMN-24121-A-D> a <http://bee-up.omilab.org/rdf/1_7#r_Message_Flow_BPMN>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Denomination> "M1";
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-24090-A>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-24099-D> .
+
+<http://www.omilab.org#Message_Flow_BPMN-24132-F-C> a <http://bee-up.omilab.org/rdf/1_7#r_Message_Flow_BPMN>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Denomination> "M2";
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-24105-F>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-24096-C> .
+
+<http://www.omilab.org#Task_BPMN-24090-A> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.comvantage.eu/mm#a_Name> "A";
+  <http://www.w3.org/2000/01/rdf-schema#label> "A" .
+
+<http://www.omilab.org#Task_BPMN-24093-B> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.comvantage.eu/mm#a_Name> "B";
+  <http://www.w3.org/2000/01/rdf-schema#label> "B" .
+
+<http://www.omilab.org#Task_BPMN-24096-C> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.comvantage.eu/mm#a_Name> "C";
+  <http://www.w3.org/2000/01/rdf-schema#label> "C" .
+
+<http://www.omilab.org#Task_BPMN-24099-D> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.comvantage.eu/mm#a_Name> "D";
+  <http://www.w3.org/2000/01/rdf-schema#label> "D" .
+
+<http://www.omilab.org#Task_BPMN-24102-E> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.comvantage.eu/mm#a_Name> "E";
+  <http://www.w3.org/2000/01/rdf-schema#label> "E" .
+
+<http://www.omilab.org#Task_BPMN-24105-F> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.comvantage.eu/mm#a_Name> "F";
+  <http://www.w3.org/2000/01/rdf-schema#label> "F" .

@@ -1,0 +1,48 @@
+
+<http://www.omilab.org#Task_BPMN-21845-Retrieve_user_credentials> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Costs> "0.01";
+  <http://bee-up.omilab.org/rdf/1_7#a_Execution_time> "00:000:00:00:02";
+  <http://www.w3.org/2000/01/rdf-schema#label> "Retrieve user credentials" .
+
+<http://www.omilab.org#Task_BPMN-21849-Validate_credentials> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Costs> "0.02";
+  <http://bee-up.omilab.org/rdf/1_7#a_Execution_time> "00:000:00:00:05";
+  <http://www.w3.org/2000/01/rdf-schema#label> "Validate credentials" .
+
+<http://www.omilab.org#Task_BPMN-21857-Check_access_rights> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Costs> "0.03";
+  <http://bee-up.omilab.org/rdf/1_7#a_Execution_time> "00:000:00:00:06";
+  <http://www.w3.org/2000/01/rdf-schema#label> "Check access rights" .
+
+<http://www.omilab.org#Task_BPMN-21861-Create_authentication_log> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Costs> "0.01";
+  <http://bee-up.omilab.org/rdf/1_7#a_Execution_time> "00:000:00:00:01";
+  <http://www.w3.org/2000/01/rdf-schema#label> "Create authentication log" .
+
+<http://www.omilab.org#Task_BPMN-21869-Check_for_multiple_failed_attempts> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Costs> "0.01";
+  <http://bee-up.omilab.org/rdf/1_7#a_Execution_time> "00:000:00:00:01";
+  <http://www.w3.org/2000/01/rdf-schema#label> "Check for multiple failed attempts" .
+
+<http://www.omilab.org#Task_BPMN-21924-Lock_account> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Costs> "0.03";
+  <http://bee-up.omilab.org/rdf/1_7#a_Execution_time> "00:000:00:00:05";
+  <http://www.w3.org/2000/01/rdf-schema#label> "Lock account" .
+
+<http://www.omilab.org#Task_BPMN-21929-Increment_failed_attempts_counter> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Costs> "0.01";
+  <http://bee-up.omilab.org/rdf/1_7#a_Execution_time> "00:000:00:00:01";
+  <http://www.w3.org/2000/01/rdf-schema#label> "Increment failed attempts counter" .
+
+<http://www.omilab.org#Task_BPMN-21933-Notify_user_of_account_status> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Costs> "0.02";
+  <http://bee-up.omilab.org/rdf/1_7#a_Execution_time> "00:000:00:00:02";
+  <http://www.w3.org/2000/01/rdf-schema#label> "Notify user of account status" .

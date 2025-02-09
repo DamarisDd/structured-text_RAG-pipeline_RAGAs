@@ -1,0 +1,70 @@
+
+<http://www.omilab.org#Intermediate_Event_BPMN-24068-Y> a <http://bee-up.omilab.org/rdf/1_7#o_Intermediate_Event_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Cancel> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Compensation> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Conditional> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Error> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Escalation> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Link> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Message> "Yes";
+  <http://bee-up.omilab.org/rdf/1_7#a_Signal> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Timer> "No";
+  <http://www.w3.org/2000/01/rdf-schema#label> "Y" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-24071-X> a <http://bee-up.omilab.org/rdf/1_7#o_Intermediate_Event_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Cancel> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Compensation> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Conditional> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Error> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Escalation> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Link> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Message> "Yes";
+  <http://bee-up.omilab.org/rdf/1_7#a_Signal> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Timer> "No";
+  <http://www.w3.org/2000/01/rdf-schema#label> "X" .
+
+<http://www.omilab.org#Intermediate_Event_BPMN-24074-Z> a <http://bee-up.omilab.org/rdf/1_7#o_Intermediate_Event_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Cancel> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Compensation> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Conditional> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Error> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Escalation> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Link> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Message> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Signal> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Timer> "Yes";
+  <http://www.w3.org/2000/01/rdf-schema#label> "Z" .
+
+<http://www.omilab.org#Start_Event_BPMN-24062-Start_Event_BPMN-35353> a <http://bee-up.omilab.org/rdf/1_7#o_Start_Event_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#a_Compensation> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Conditional> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Error> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Escalation> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Message> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Signal> "No";
+  <http://bee-up.omilab.org/rdf/1_7#a_Timer> "No";
+  <http://www.w3.org/2000/01/rdf-schema#label> "Start Event (BPMN)-35353" .
+
+<http://www.omilab.org#Subsequent-24077-Start_Event_BPMN-35353-X> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Start_Event_BPMN-24062-Start_Event_BPMN-35353>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Intermediate_Event_BPMN-24071-X> .
+
+<http://www.omilab.org#Subsequent-24078-Y-Z> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Intermediate_Event_BPMN-24068-Y>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Intermediate_Event_BPMN-24074-Z> .
+
+<http://www.omilab.org#Subsequent-24079-X-Y> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Intermediate_Event_BPMN-24071-X>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Intermediate_Event_BPMN-24068-Y> .
+
+<http://www.omilab.org#Subsequent-24080-Z-End_Event_BPMN-35359> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Intermediate_Event_BPMN-24074-Z>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#End_Event_BPMN-24065-End_Event_BPMN-35359> .

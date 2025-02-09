@@ -1,0 +1,435 @@
+
+<http://www.omilab.org#Data_Association_BPMN-19463-Activate_bot-Products_+_desired_quantity_dialog>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19335-Activate_bot>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Data_Object_BPMN-19338-Products_+_desired_quantity_dialog> .
+
+<http://www.omilab.org#Data_Association_BPMN-19466-Products_+_desired_quantity_dialog-Repeat_for_each_desired_product>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Data_Object_BPMN-19338-Products_+_desired_quantity_dialog>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Sub-Process_BPMN-19263-Repeat_for_each_desired_product> .
+
+<http://www.omilab.org#Data_Association_BPMN-19468-User_credentials_stored_in_bot-Bot_authentication_microflow>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Data_Object_BPMN-19341-User_credentials_stored_in_bot>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Sub-Process_BPMN-19275-Bot_authentication_microflow> .
+
+<http://www.omilab.org#Data_Association_BPMN-19471-Delivery_+_billing_details_Excel-Provide_delivery_+_invoicing_data>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Data_Object_BPMN-19344-Delivery_+_billing_details_Excel>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19347-Provide_delivery_+_invoicing_data> .
+
+<http://www.omilab.org#Data_Association_BPMN-19488-Save_invoice-Invoice_default_folder>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19359-Save_invoice>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Data_Object_BPMN-19371-Invoice_default_folder> .
+
+<http://www.omilab.org#Data_Association_BPMN-19499-Email_credentials_stored_in_bot-Look_for_email_from_merchant>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Data_Object_BPMN-19368-Email_credentials_stored_in_bot>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19356-Look_for_email_from_merchant> .
+
+<http://www.omilab.org#Data_Association_BPMN-19507-Gmail_server-Look_for_email_from_merchant>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Data_Object_BPMN-19380-Gmail_server>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19356-Look_for_email_from_merchant> .
+
+<http://www.omilab.org#Data_Association_BPMN-19510-Store_web_address_stored_in_bot-Browse_products_page>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Data_Object_BPMN-19386-Store_web_address_stored_in_bot>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19260-Browse_products_page> .
+
+<http://www.omilab.org#Data_Association_BPMN-21894-Create_authentication_log-Logging_details_of_each_authentication_attempt>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-21861-Create_authentication_log>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Data_Object_BPMN-21891-Logging_details_of_each_authentication_attempt> .
+
+<http://www.omilab.org#Message_Flow_BPMN-19492-Generate_order_confirmation_SMS-Twilio_API>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Message_Flow_BPMN>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19362-Generate_order_confirmation_SMS>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Pool_collapsed_BPMN-19374-Twilio_API> .
+
+<http://www.omilab.org#Message_Flow_BPMN-19496-Generate_failure_SMS-Twilio_API> a
+    <http://bee-up.omilab.org/rdf/1_7#r_Message_Flow_BPMN>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19365-Generate_failure_SMS>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Pool_collapsed_BPMN-19374-Twilio_API> .
+
+<http://www.omilab.org#Message_Flow_BPMN-19502-Twilio_API-Track_order> a <http://bee-up.omilab.org/rdf/1_7#r_Message_Flow_BPMN>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Pool_collapsed_BPMN-19374-Twilio_API>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19326-Track_order> .
+
+<http://www.omilab.org#Message_Flow_BPMN-19503-Twilio_API-Failure_notification_received>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Message_Flow_BPMN>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Pool_collapsed_BPMN-19374-Twilio_API>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Intermediate_Event_BPMN-19377-Failure_notification_received> .
+
+<http://www.omilab.org#Subsequent-19391-Start_online_order-Activate_bot> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Start_Event_BPMN-19257-Start_online_order>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19335-Activate_bot> .
+
+<http://www.omilab.org#Subsequent-19393-Browse_products_page-Repeat_for_each_desired_product>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19260-Browse_products_page>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Sub-Process_BPMN-19263-Repeat_for_each_desired_product> .
+
+<http://www.omilab.org#Subsequent-19396-Repeat_for_each_desired_product-Bot_authentication_microflow>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Sub-Process_BPMN-19263-Repeat_for_each_desired_product>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Sub-Process_BPMN-19275-Bot_authentication_microflow> .
+
+<http://www.omilab.org#Subsequent-19399-Access_product_details-Add_product_to_cart>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19266-Access_product_details>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19269-Add_product_to_cart> .
+
+<http://www.omilab.org#Subsequent-19402-Add_product_to_cart-Edit_quantity> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19269-Add_product_to_cart>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19272-Edit_quantity> .
+
+<http://www.omilab.org#Subsequent-19407-Bot_authentication_microflow-Authentication_result>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Sub-Process_BPMN-19275-Bot_authentication_microflow>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Intermediate_Event_BPMN-21941-Authentication_result> .
+
+<http://www.omilab.org#Subsequent-19410-Non-exclusive_Gateway_BPMN-32174-Approve_online_payment>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Non-exclusive_Gateway_BPMN-19278-Non-exclusive_Gateway_BPMN-32174>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19281-Approve_online_payment> .
+
+<http://www.omilab.org#Subsequent-19412-Non-exclusive_Gateway_BPMN-32174-Trigger_payment_with_saved_payment_method>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Non-exclusive_Gateway_BPMN-19278-Non-exclusive_Gateway_BPMN-32174>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19353-Trigger_payment_with_saved_payment_method> .
+
+<http://www.omilab.org#Subsequent-19414-Approve_online_payment-Non-exclusive_Gateway_BPMN-32190>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19281-Approve_online_payment>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Non-exclusive_Gateway_BPMN-19284-Non-exclusive_Gateway_BPMN-32190> .
+
+<http://www.omilab.org#Subsequent-19417-Non-exclusive_Gateway_BPMN-32190-Order_placed>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Non-exclusive_Gateway_BPMN-19284-Non-exclusive_Gateway_BPMN-32190>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Intermediate_Event_BPMN-19317-Order_placed> .
+
+<http://www.omilab.org#Subsequent-19419-Order_arrived-Feedback_needed?> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Intermediate_Event_BPMN-19287-Order_arrived>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Exclusive_Gateway_BPMN-19293-Feedback_needed?> .
+
+<http://www.omilab.org#Subsequent-19422-Leave_feedback-Purchase_completed> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19290-Leave_feedback>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#End_Event_BPMN-19296-Purchase_completed> .
+
+<http://www.omilab.org#Subsequent-19424-Feedback_needed?-Leave_feedback> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-19293-Feedback_needed?>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19290-Leave_feedback> .
+
+<http://www.omilab.org#Subsequent-19425-Feedback_needed?-Purchase_completed> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-19293-Feedback_needed?>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#End_Event_BPMN-19296-Purchase_completed> .
+
+<http://www.omilab.org#Subsequent-19429-Possible_events-Invoice_+_order_confirmation_validated>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-19299-Possible_events>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Intermediate_Event_BPMN-19320-Invoice_+_order_confirmation_validated> .
+
+<http://www.omilab.org#Subsequent-19431-Possible_events-Order_cancellation_detected>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-19299-Possible_events>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Intermediate_Event_BPMN-19302-Order_cancellation_detected> .
+
+<http://www.omilab.org#Subsequent-19434-Order_cancellation_detected-Generate_failure_SMS>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Intermediate_Event_BPMN-19302-Order_cancellation_detected>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19365-Generate_failure_SMS> .
+
+<http://www.omilab.org#Subsequent-19439-20_days_late-Notify_delay> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Intermediate_Event_BPMN-19308-20_days_late>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19311-Notify_delay> .
+
+<http://www.omilab.org#Subsequent-19441-Notify_delay-Lost_order> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19311-Notify_delay>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#End_Event_BPMN-19314-Lost_order> .
+
+<http://www.omilab.org#Subsequent-19444-Order_placed-Look_for_email_from_merchant>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Intermediate_Event_BPMN-19317-Order_placed>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19356-Look_for_email_from_merchant> .
+
+<http://www.omilab.org#Subsequent-19447-Invoice_+_order_confirmation_validated-Save_invoice>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Intermediate_Event_BPMN-19320-Invoice_+_order_confirmation_validated>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19359-Save_invoice> .
+
+<http://www.omilab.org#Subsequent-19450-Possible_post-ordering_outcomes-20_days_late>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-19323-Possible_post-ordering_outcomes>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Intermediate_Event_BPMN-19308-20_days_late> .
+
+<http://www.omilab.org#Subsequent-19451-Possible_post-ordering_outcomes-Order_arrived>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-19323-Possible_post-ordering_outcomes>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Intermediate_Event_BPMN-19287-Order_arrived> .
+
+<http://www.omilab.org#Subsequent-19454-Track_order-Possible_post-ordering_outcomes>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19326-Track_order>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Exclusive_Gateway_BPMN-19323-Possible_post-ordering_outcomes> .
+
+<http://www.omilab.org#Subsequent-19460-Activate_bot-Browse_products_page> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19335-Activate_bot>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19260-Browse_products_page> .
+
+<http://www.omilab.org#Subsequent-19475-Provide_delivery_+_invoicing_data-Request_billing>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19347-Provide_delivery_+_invoicing_data>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19350-Request_billing> .
+
+<http://www.omilab.org#Subsequent-19478-Request_billing-Non-exclusive_Gateway_BPMN-32174>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19350-Request_billing>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Non-exclusive_Gateway_BPMN-19278-Non-exclusive_Gateway_BPMN-32174> .
+
+<http://www.omilab.org#Subsequent-19481-Trigger_payment_with_saved_payment_method-Non-exclusive_Gateway_BPMN-32190>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19353-Trigger_payment_with_saved_payment_method>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Non-exclusive_Gateway_BPMN-19284-Non-exclusive_Gateway_BPMN-32190> .
+
+<http://www.omilab.org#Subsequent-19482-Look_for_email_from_merchant-Possible_events>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19356-Look_for_email_from_merchant>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Exclusive_Gateway_BPMN-19299-Possible_events> .
+
+<http://www.omilab.org#Subsequent-19485-Save_invoice-Generate_order_confirmation_SMS>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19359-Save_invoice>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19362-Generate_order_confirmation_SMS> .
+
+<http://www.omilab.org#Subsequent-19489-Generate_order_confirmation_SMS-Track_order>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19362-Generate_order_confirmation_SMS>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19326-Track_order> .
+
+<http://www.omilab.org#Subsequent-19493-Generate_failure_SMS-Failure_notification_received>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-19365-Generate_failure_SMS>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Intermediate_Event_BPMN-19377-Failure_notification_received> .
+
+<http://www.omilab.org#Subsequent-19506-Failure_notification_received-Unsatisfied_customer>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Intermediate_Event_BPMN-19377-Failure_notification_received>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#End_Event_BPMN-19305-Unsatisfied_customer> .
+
+<http://www.omilab.org#Subsequent-21848-Authentication_request_received-Retrieve_user_credentials>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Start_Event_BPMN-21842-Authentication_request_received>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-21845-Retrieve_user_credentials> .
+
+<http://www.omilab.org#Subsequent-21852-Retrieve_user_credentials-Validate_credentials>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-21845-Retrieve_user_credentials>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-21849-Validate_credentials> .
+
+<http://www.omilab.org#Subsequent-21856-Validate_credentials-Credentials_valid?> a
+    <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-21849-Validate_credentials>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Exclusive_Gateway_BPMN-21853-Credentials_valid?> .
+
+<http://www.omilab.org#Subsequent-21860-Credentials_valid?-Check_access_rights> a
+    <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-21853-Credentials_valid?>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-21857-Check_access_rights> .
+
+<http://www.omilab.org#Subsequent-21864-Check_access_rights-Create_authentication_log>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-21857-Check_access_rights>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-21861-Create_authentication_log> .
+
+<http://www.omilab.org#Subsequent-21868-Create_authentication_log-Successful_authentication>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-21861-Create_authentication_log>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#End_Event_BPMN-21865-Successful_authentication> .
+
+<http://www.omilab.org#Subsequent-21872-Credentials_valid?-Check_for_multiple_failed_attempts>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-21853-Credentials_valid?>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-21869-Check_for_multiple_failed_attempts> .
+
+<http://www.omilab.org#Subsequent-21913-Check_for_multiple_failed_attempts-Attempts_under_limit?>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-21869-Check_for_multiple_failed_attempts>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Exclusive_Gateway_BPMN-21910-Attempts_under_limit?> .
+
+<http://www.omilab.org#Subsequent-21917-Attempts_under_limit?-Grace_period_for_one_more_try_before_lockout>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-21910-Attempts_under_limit?>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Intermediate_Event_BPMN-21914-Grace_period_for_one_more_try_before_lockout> .
+
+<http://www.omilab.org#Subsequent-21922-Grace_period_for_one_more_try_before_lockout-Additional_authentication_attempt?>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Intermediate_Event_BPMN-21914-Grace_period_for_one_more_try_before_lockout>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Exclusive_Gateway_BPMN-21919-Additional_authentication_attempt?> .
+
+<http://www.omilab.org#Subsequent-21923-Additional_authentication_attempt?-Retrieve_user_credentials>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-21919-Additional_authentication_attempt?>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-21845-Retrieve_user_credentials> .
+
+<http://www.omilab.org#Subsequent-21928-Attempts_under_limit?-Lock_account> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-21910-Attempts_under_limit?>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-21924-Lock_account> .
+
+<http://www.omilab.org#Subsequent-21932-Lock_account-Increment_failed_attempts_counter>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-21924-Lock_account>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-21929-Increment_failed_attempts_counter> .
+
+<http://www.omilab.org#Subsequent-21936-Increment_failed_attempts_counter-Notify_user_of_account_status>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-21929-Increment_failed_attempts_counter>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-21933-Notify_user_of_account_status> .
+
+<http://www.omilab.org#Subsequent-21940-Notify_user_of_account_status-_Failed_authentication>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-21933-Notify_user_of_account_status>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#End_Event_BPMN-21937-_Failed_authentication> .
+
+<http://www.omilab.org#Subsequent-21944-Authentication_result-Authentication_successful?>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Intermediate_Event_BPMN-21941-Authentication_result>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Exclusive_Gateway_BPMN-21947-Authentication_successful?> .
+
+<http://www.omilab.org#Subsequent-21950-Authentication_successful?-Provide_delivery_+_invoicing_data>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-21947-Authentication_successful?>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-19347-Provide_delivery_+_invoicing_data> .
+
+<http://www.omilab.org#Subsequent-21964-Authentication_successful?-Notify_user_of_failed_authentication>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-21947-Authentication_successful?>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-21959-Notify_user_of_failed_authentication> .
+
+<http://www.omilab.org#Subsequent-21970-Notify_user_of_failed_authentication-Failed_authentication_notification_received>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-21959-Notify_user_of_failed_authentication>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Intermediate_Event_BPMN-21965-Failed_authentication_notification_received> .
+
+<http://www.omilab.org#Subsequent-21976-Failed_authentication_notification_received-Unsuccessful_authentication>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Intermediate_Event_BPMN-21965-Failed_authentication_notification_received>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#End_Event_BPMN-21971-Unsuccessful_authentication> .
+
+<http://www.omilab.org#Subsequent-22018-Additional_authentication_attempt?-_Failed_authentication>
+  a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Exclusive_Gateway_BPMN-21919-Additional_authentication_attempt?>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#End_Event_BPMN-21937-_Failed_authentication> .
+
+<http://www.omilab.org#Task_BPMN-19260-Browse_products_page> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Browse products page" .
+
+<http://www.omilab.org#Task_BPMN-19266-Access_product_details> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Access product details" .
+
+<http://www.omilab.org#Task_BPMN-19269-Add_product_to_cart> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Add product to cart" .
+
+<http://www.omilab.org#Task_BPMN-19272-Edit_quantity> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Edit quantity" .
+
+<http://www.omilab.org#Task_BPMN-19281-Approve_online_payment> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Approve online payment" .
+
+<http://www.omilab.org#Task_BPMN-19290-Leave_feedback> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Leave feedback" .
+
+<http://www.omilab.org#Task_BPMN-19311-Notify_delay> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Notify delay" .
+
+<http://www.omilab.org#Task_BPMN-19326-Track_order> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Track order" .
+
+<http://www.omilab.org#Task_BPMN-19335-Activate_bot> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Activate bot" .
+
+<http://www.omilab.org#Task_BPMN-19347-Provide_delivery_+_invoicing_data> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Provide delivery & invoicing data" .
+
+<http://www.omilab.org#Task_BPMN-19350-Request_billing> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Request billing" .
+
+<http://www.omilab.org#Task_BPMN-19353-Trigger_payment_with_saved_payment_method>
+  a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>, <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Trigger payment with saved payment method" .
+
+<http://www.omilab.org#Task_BPMN-19356-Look_for_email_from_merchant> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Look for email from merchant" .
+
+<http://www.omilab.org#Task_BPMN-19359-Save_invoice> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Save invoice" .
+
+<http://www.omilab.org#Task_BPMN-19362-Generate_order_confirmation_SMS> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Generate order confirmation SMS" .
+
+<http://www.omilab.org#Task_BPMN-19365-Generate_failure_SMS> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Generate failure SMS" .
+
+<http://www.omilab.org#Task_BPMN-21845-Retrieve_user_credentials> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Retrieve user credentials" .
+
+<http://www.omilab.org#Task_BPMN-21849-Validate_credentials> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Validate credentials" .
+
+<http://www.omilab.org#Task_BPMN-21857-Check_access_rights> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Check access rights" .
+
+<http://www.omilab.org#Task_BPMN-21861-Create_authentication_log> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Create authentication log" .
+
+<http://www.omilab.org#Task_BPMN-21869-Check_for_multiple_failed_attempts> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Check for multiple failed attempts" .
+
+<http://www.omilab.org#Task_BPMN-21924-Lock_account> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Lock account" .
+
+<http://www.omilab.org#Task_BPMN-21929-Increment_failed_attempts_counter> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Increment failed attempts counter" .
+
+<http://www.omilab.org#Task_BPMN-21933-Notify_user_of_account_status> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Notify user of account status" .
+
+<http://www.omilab.org#Task_BPMN-21959-Notify_user_of_failed_authentication> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Notify user of failed authentication" .

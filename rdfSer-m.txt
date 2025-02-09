@@ -1,0 +1,96 @@
+
+<http://www.omilab.org#Data_Association_BPMN-23965-A-d1> a <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-23936-A>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Data_Object_BPMN-23945-d1> .
+
+<http://www.omilab.org#Data_Association_BPMN-23966-A-d2> a <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-23936-A>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Data_Object_BPMN-23951-d2> .
+
+<http://www.omilab.org#Data_Association_BPMN-23975-d1-C> a <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Data_Object_BPMN-23945-d1>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-23942-C> .
+
+<http://www.omilab.org#Data_Association_BPMN-23979-d2-D> a <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Data_Object_BPMN-23951-d2>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-23948-D> .
+
+<http://www.omilab.org#Data_Object_BPMN-23945-d1> a <http://bee-up.omilab.org/rdf/1_7#o_Data_Object_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#r_Is_inside> <http://www.omilab.org#Lane_BPMN-23924-Lane_1>,
+    <http://www.omilab.org#Pool_BPMN-23921-Pool_A>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "d1" .
+
+<http://www.omilab.org#Data_Object_BPMN-23951-d2> a <http://bee-up.omilab.org/rdf/1_7#o_Data_Object_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#r_Is_inside> <http://www.omilab.org#Lane_BPMN-23927-Lane_2>,
+    <http://www.omilab.org#Pool_BPMN-23921-Pool_A>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "d2" .
+
+<http://www.omilab.org#Lane_BPMN-23924-Lane_1> a <http://bee-up.omilab.org/rdf/1_7#o_Lane_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#r_Is_inside> <http://www.omilab.org#Pool_BPMN-23921-Pool_A>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Lane 1" .
+
+<http://www.omilab.org#Lane_BPMN-23927-Lane_2> a <http://bee-up.omilab.org/rdf/1_7#o_Lane_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#r_Is_inside> <http://www.omilab.org#Lane_BPMN-23924-Lane_1>,
+    <http://www.omilab.org#Pool_BPMN-23921-Pool_A>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Lane 2" .
+
+<http://www.omilab.org#Pool_BPMN-23921-Pool_A> a <http://bee-up.omilab.org/rdf/1_7#o_Pool_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Pool A" .
+
+<http://www.omilab.org#Subsequent-23959-Start_Event_BPMN-35186-A> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Start_Event_BPMN-23930-Start_Event_BPMN-35186>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-23936-A> .
+
+<http://www.omilab.org#Subsequent-23964-A-B> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-23936-A>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-23939-B> .
+
+<http://www.omilab.org#Subsequent-23969-B-C> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-23939-B>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-23942-C> .
+
+<http://www.omilab.org#Subsequent-23972-C-D> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-23942-C>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#Task_BPMN-23948-D> .
+
+<http://www.omilab.org#Subsequent-23976-D-End_Event_BPMN-35191> a <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>,
+    <http://www.comvantage.eu/mm#r_Modelling_relation_a>;
+  <http://www.comvantage.eu/mm#from> <http://www.omilab.org#Task_BPMN-23948-D>;
+  <http://www.comvantage.eu/mm#to> <http://www.omilab.org#End_Event_BPMN-23933-End_Event_BPMN-35191> .
+
+<http://www.omilab.org#Task_BPMN-23936-A> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#r_Is_inside> <http://www.omilab.org#Lane_BPMN-23924-Lane_1>,
+    <http://www.omilab.org#Pool_BPMN-23921-Pool_A>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "A" .
+
+<http://www.omilab.org#Task_BPMN-23939-B> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#r_Is_inside> <http://www.omilab.org#Lane_BPMN-23927-Lane_2>,
+    <http://www.omilab.org#Pool_BPMN-23921-Pool_A>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "B" .
+
+<http://www.omilab.org#Task_BPMN-23942-C> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#r_Is_inside> <http://www.omilab.org#Lane_BPMN-23924-Lane_1>,
+    <http://www.omilab.org#Pool_BPMN-23921-Pool_A>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "C" .
+
+<http://www.omilab.org#Task_BPMN-23948-D> a <http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>,
+    <http://www.comvantage.eu/mm#o_Modelling_object>;
+  <http://bee-up.omilab.org/rdf/1_7#r_Is_inside> <http://www.omilab.org#Lane_BPMN-23927-Lane_2>,
+    <http://www.omilab.org#Pool_BPMN-23921-Pool_A>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "D" .s
