@@ -1,23 +1,56 @@
-from langchain_community.document_loaders import TextLoader
+# ========================================================================
+# IMPORTANT:
+# First, check "Instructions.txt" for the prerequisites for this experimental setup.
+# Otherwise, here's a shortcut:
+#
+# Run the following Docker command into the terminal, where:
+# REST API (port 8080): used for standard HTTP requests like adding data, querying and managing schemas.
+# gRPC API (port 50051): used for high-performance operations or streaming capabilities in specific applications.
+# Docker command:
+# docker run -d --name weaviate `
+#  -p 8080:8080 `
+#  -p 50051:50051 `
+#  semitechnologies/weaviate:latest
+#
+# Check Weaviate container status:
+# docker ps
+#
+#
+# Each TextLoader line below is intended for a specific evaluation scenario.
+# Note: The RDF files (named with the "rdfSer" prefix) were generated in GraphDB after filtering specific typed of nodes and edges that are relevant to the query.
+# That is, each file loaded here corresponds to:
+#   - A unique question in the "questions" list;
+#   - A unique ground truth in the "ground_truths" list;
+#   - A unique answer in the "answers" list.
+#
+# You can test more than one question for a given RDF serialized process. However, ensure that each question has its corresponding ground truth and answer.
+#
+# To run the evaluation for a specific file:
+#   1. Uncomment the loader line for the file you want to use.
+#   2. Make sure to uncomment (or update) the corresponding question, ground truth and answer entries in their respective lists.
+#   3. Comment out the loader lines (and the associated Q/A entries) for all other files.
+# ========================================================================
 
+
+from langchain_community.document_loaders import TextLoader
 # Load the RDF data as context
-# loader = TextLoader("rdfSer-6BEN-enumerate all tasks.txt")
-loader = TextLoader("rdfSer-6BEN-can the tasks be executed simultanously.txt") # Used for question "What happens if the user credentials are not valid?", as well
-# loader = TextLoader("rdfSer-6BEN-cost and execution time.txt")
-# loader = TextLoader("rdfSer-a.txt")
-# loader = TextLoader("rdfSer-b.txt")
-# loader = TextLoader("rdfSer-c.txt")
-# loader = TextLoader("rdfSer-d.txt")
-# loader = TextLoader("rdfSer-e.txt")
-# loader = TextLoader("rdfSer-f.txt")
-# loader = TextLoader("rdfSer-g.txt")
-# loader = TextLoader("rdfSer-h.txt")
-# loader = TextLoader("rdfSer-i.txt")
-# loader = TextLoader("rdfSer-j.txt")
-# loader = TextLoader("rdfSer-k.txt")
-# loader = TextLoader("rdfSer-l.txt")
-# loader = TextLoader("rdfSer-m.txt")
-# loader = TextLoader("rdfSer-m-second.txt")
+# loader = TextLoader("RDF_context/rdfSer-6BEN-enumerate all tasks.txt")
+loader = TextLoader("RDF_context/rdfSer-6BEN-can the tasks be executed simultanously.txt") # Used for question "What happens if the user credentials are not valid?", as well
+# loader = TextLoader("RDF_context/rdfSer-6BEN-cost and execution time.txt")
+# loader = TextLoader("RDF_context/rdfSer-a.txt")
+# loader = TextLoader("RDF_context/rdfSer-b.txt")
+# loader = TextLoader("RDF_context/rdfSer-c.txt")
+# loader = TextLoader("RDF_context/rdfSer-d.txt")
+# loader = TextLoader("RDF_context/rdfSer-e.txt")
+# loader = TextLoader("RDF_context/rdfSer-f.txt")
+# loader = TextLoader("RDF_context/rdfSer-g.txt")
+# loader = TextLoader("RDF_context/rdfSer-h.txt")
+# loader = TextLoader("RDF_context/rdfSer-i.txt")
+# loader = TextLoader("RDF_context/rdfSer-j.txt")
+# loader = TextLoader("RDF_context/rdfSer-k.txt")
+# loader = TextLoader("RDF_context/rdfSer-l.txt")
+# loader = TextLoader("RDF_context/rdfSer-m.txt")
+# loader = TextLoader("RDF_context/rdfSer-m-second.txt")
 documents = loader.load()
 
 # Extract and clean the full text content
@@ -26,6 +59,8 @@ full_context = full_context.replace("\n", " ")  # Replace all newlines with sing
 full_context = " ".join(full_context.split())  # Normalize multiple spaces into single spaces
 
 # Define evaluation data
+# IMPORTANT: Each question in the "questions" list should correspond to the RDF file loaded above.
+# Similarly, each ground truth in "ground_truths" and each answer in "answers" must match the evaluation scenario of the selected RDF file.
 questions = [
     # "Enumerate all tasks and all subprocesses inside 'User coordinated bot' pool, subsequent to the task labeled 'Add product to cart'."
     # "Can the tasks 'Notify user of failed authentication' and 'Provide delivery & invoicing data' be executed simultaneously and why or why not?"
@@ -98,20 +133,20 @@ answers = [
 # Use the cleaned full context
 contexts = [[full_context] for _ in questions]  # Every question gets the same cleaned RDF file as context
 
-# Define data dictionary
+# Define the data dictionary for evaluation
 data = {
     "question": questions,
     "answer": answers,
-    "contexts": contexts,  # Use cleaned full RDF file as context
+    "contexts": contexts,
     "ground_truths": ground_truths,
     "reference": ground_truths,
 }
 
-# Prepare the evaluation dataset
+# Prepare the evaluation dataset using Hugging Face's Dataset
 from datasets import Dataset
 dataset = Dataset.from_dict(data)
 
-# Define evaluation metrics
+# Define evaluation metrics from the RAGAs framework
 from ragas import evaluate
 from ragas.metrics import (
     ResponseRelevancy,
@@ -120,11 +155,13 @@ from ragas.metrics import (
 from ragas.metrics._factual_correctness import FactualCorrectness
 from ragas.embeddings import LangchainEmbeddingsWrapper
 
-# Load OpenAI API key
+# Load OpenAI API key from the .env file
+# IMPORTANT: Define your OpenAI key in a file named ".env" in the root directory of your project: OPENAI_API_KEY="<YOUR_OPENAI_API_KEY>"
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+# Configure the OpenAI LLM used as you wish
 llm = ChatOpenAI(model_name="gpt-4", temperature=1)
 from ragas.llms import LangchainLLMWrapper
 evaluator_llm = LangchainLLMWrapper(llm)
@@ -149,7 +186,7 @@ def semantic_faithfulness(answer, contexts):
     ]
 
     # Return the average faithfulness, rounded to two decimals
-    return round(np.mean(similarities), 2)  # Return the average similarity score
+    return round(np.mean(similarities), 2)
 
 # Compute modified faithfulness (semantic faithfulness) for each answer
 semantic_faithfulness_score = [
@@ -181,8 +218,13 @@ try:
     # Convert DataFrame to dictionary
     data_dict = df.to_dict(orient="records")
 
-    # Save JSON manually to prevent excessive escaping
-    with open("df_RDF.json", "w", encoding="utf-8") as f:
+    import os
+    # Ensure the output directory, "RDF-process_Results", exists
+    results_dir = "RDF-process_Results"
+    os.makedirs(results_dir, exist_ok=True)
+
+    # Save JSON output in the output directory
+    with open(os.path.join(results_dir, "df_RDF.json"), "w", encoding="utf-8") as f:
         json.dump(data_dict, f, indent=4, ensure_ascii=False)  # Prevent escaping
 
     print("\nDataFrames successfully exported to JSON.")

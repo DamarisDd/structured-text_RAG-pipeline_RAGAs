@@ -41,7 +41,7 @@ pip install -r requirements.txt
 	pip install -U langchain-community
     }
 
-8. Define OpenAI key in a file named ".env", in the root directory of your project:
+8. Define your OpenAI key in a file named ".env", in the root directory of your project:
 OPENAI_API_KEY="<YOUR_OPENAI_API_KEY>"
 
 9. Download Docker Desktop (Docker Desktop for Windows - x86_64) from:
@@ -62,8 +62,11 @@ docker run -d --name weaviate `
   -p 50051:50051 `
   semitechnologies/weaviate:latest
 
+    {Sidenote: Additionally, this repository includes a "docker-compose.yaml" file to easily launch the required services (Weaviate and multi2vec-clip). So, 	if needed, you can customize the "docker-compose.yaml" file settings for your environment and then run the following command in the project root to 	start the Weaviate service:
+	docker-compose up -d
+    }
+
 14. Verify that the Weaviate container is running:
 docker ps
 
 The output should list a container with the name weaviate (e.g., semitechnologies/weaviate:latest).
-

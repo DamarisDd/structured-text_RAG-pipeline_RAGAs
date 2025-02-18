@@ -1,32 +1,51 @@
+# ========================================================================
+# IMPORTANT:
+# First, check "Instructions.txt" for the prerequisites for this experimental setup.
+# Otherwise, here's a shortcut:
+#
 # Run the following Docker command into the terminal, where:
 # REST API (port 8080): used for standard HTTP requests like adding data, querying and managing schemas.
 # gRPC API (port 50051): used for high-performance operations or streaming capabilities in specific applications.
-
+# Docker command:
 # docker run -d --name weaviate `
 #  -p 8080:8080 `
 #  -p 50051:50051 `
 #  semitechnologies/weaviate:latest
-
+#
 # Check Weaviate container status:
 # docker ps
+#
+# Each TextLoader line below is intended for a specific evaluation scenario.
+# Therefore, each file loaded here corresponds to:
+#   - A unique question in the "questions" list;
+#   - A unique ground truth in the "ground_truths" list.
+#
+# You can test more than one question for a given BPMN XML serialized process. However, ensure that each question has its corresponding ground truth.
+#
+# To run the evaluation for a specific file:
+#   1. Uncomment the loader line for the file you want to use.
+#   2. Make sure to uncomment (or update) the corresponding question and ground truth in their respective lists.
+#   3. Comment out the loader lines (and the associated question and ground truth entries) for all other files.
+# ========================================================================
+
 
 # 1.
 from langchain_community.document_loaders import TextLoader
 # Load the BPMN file
-# loader = TextLoader("6B.EN BPMN - supervised bot.bpmn")
-# loader = TextLoader("a.simpletasksequence.anonim.bpmn")
-# loader = TextLoader("b.taskeventsequence.anonim.bpmn")
-# loader = TextLoader("c.tasklesssequence.anonim.bpmn")
-# loader = TextLoader("d.parallellbranching.anonim.bpmn")
-# loader = TextLoader("e.decisionbranching.anonim.bpmn")
-# loader = TextLoader("f.eventbranching.anonim.bpmn")
-# loader = TextLoader("g.boundarybranching.anonim.bpmn")
-# loader = TextLoader("h.compensationbranching.anonim.bpmn")
-# loader = TextLoader("i.taskcollaboration.anonim.bpmn")
-# loader = TextLoader("j.collapsedpoolcollaboration.anonim.bpmn")
-loader = TextLoader("k.eventcollaboration.anonim.bpmn")
-# loader = TextLoader("l.lanecoordination.anonim.bpmn")
-# loader = TextLoader("m.lanecoordinationwithdata.anonim.bpmn")
+# loader = TextLoader("BPMN-XML_context/6B.EN BPMN - supervised bot.bpmn")
+# loader = TextLoader("BPMN-XML_context/a.simpletasksequence.anonim.bpmn")
+# loader = TextLoader("BPMN-XML_context/b.taskeventsequence.anonim.bpmn")
+# loader = TextLoader("BPMN-XML_context/c.tasklesssequence.anonim.bpmn")
+# loader = TextLoader("BPMN-XML_context/d.parallellbranching.anonim.bpmn")
+# loader = TextLoader("BPMN-XML_context/e.decisionbranching.anonim.bpmn")
+# loader = TextLoader("BPMN-XML_context/f.eventbranching.anonim.bpmn")
+# loader = TextLoader("BPMN-XML_context/g.boundarybranching.anonim.bpmn")
+# loader = TextLoader("BPMN-XML_context/h.compensationbranching.anonim.bpmn")
+# loader = TextLoader("BPMN-XML_context/i.taskcollaboration.anonim.bpmn")
+# loader = TextLoader("BPMN-XML_context/j.collapsedpoolcollaboration.anonim.bpmn")
+loader = TextLoader("BPMN-XML_context/k.eventcollaboration.anonim.bpmn")
+# loader = TextLoader("BPMN-XML_context/l.lanecoordination.anonim.bpmn")
+# loader = TextLoader("BPMN-XML_context/m.lanecoordinationwithdata.anonim.bpmn")
 
 # Load the data from the specified file
 documents = loader.load()
@@ -135,6 +154,8 @@ rag_chain = (
 )
 
 # Preparing the evaluation data
+# IMPORTANT: Each question in the "questions" list should correspond to the BPMN XML file loaded above.
+# Similarly, each ground truth in "ground_truths" must match the evaluation scenario of the selected BPMN XML file.
 questions = [
     # "Enumerate all tasks and all subprocesses inside 'User coordinated bot' pool, subsequent to the task labeled 'Add product to cart'.",
     # "Can the tasks 'Notify user of failed authentication' and 'Provide delivery & invoicing data' be executed simultaneously and why or why not?"
@@ -251,8 +272,13 @@ try:
     # Convert DataFrame to dictionary
     data_dict = df_rag.to_dict(orient="records")
 
-    # Save JSON manually to prevent excessive escaping
-    with open("df_XML.json", "w", encoding="utf-8") as f:
+    import os
+    # Ensure the output directory, "BPMN-XML-process_Results", exists
+    results_dir = "BPMN-XML-process_Results"
+    os.makedirs(results_dir, exist_ok=True)
+
+    # Save JSON output in the output directory
+    with open(os.path.join(results_dir, "df_XML.json"), "w", encoding="utf-8") as f:
         json.dump(data_dict, f, indent=4, ensure_ascii=False)  # Prevent escaping
 
     print("\nDataFrames successfully exported to JSON.")
